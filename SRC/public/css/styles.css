@@ -11,3 +11,12 @@ body {
     height: 120px;
 }
 
+.card {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.card_container {
+    display: flex;
+    justify-content: center;
+}

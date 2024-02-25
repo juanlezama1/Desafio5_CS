@@ -10,9 +10,19 @@
 
 {{#each products}}
 
-<div>
-    <h2>PRODUCTO: {{this.title}}</h2>
-    <h2>PRECIO: {{this.price}}</h2>
+<div class="card_container">
+    <div class="card" style="width: 18rem;">
+        <img src="../../public/img/{{this.thumbnail}}" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">{{this.title}}</h5>
+            <p class="card-text">{{this.description}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">${{this.price}}</li>
+            <li class="list-group-item">{{this.stock}} unidades disponibles</li>
+        </ul>
+    </div>
 </div>
+
 
 {{/each}}

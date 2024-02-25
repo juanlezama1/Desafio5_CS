@@ -38,7 +38,8 @@ productsRouter.get('/:pid', async (req, res) => {
     let my_product = await gestor_productos.getProductById(product_code)
 
     // Si no existe, doy el aviso. Caso contrario, lo envío
-    my_product == -1 ? res.send("El producto no existe!") : res.send(my_product)
+    console.log(my_product)
+    my_product == -1 ? res.send("El producto no existe!") : res.render('templates/home_id', {title: 'Producto Seleccionado:', product: my_product})
 
     console.log("Producto enviado!")
 })

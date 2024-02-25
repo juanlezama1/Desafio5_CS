@@ -22,7 +22,7 @@ productsRouter.get('/', async (req, res) => {
         !limit? cantidad_productos = my_products.length: cantidad_productos = limit
 
         // Caso de que envíen un límite, pero no sea un número
-        isNaN(cantidad_productos)? res.send("El límite debe ser numérico!") : res.send(my_products.splice(0, cantidad_productos))
+        isNaN(cantidad_productos)? res.send("El límite debe ser numérico!") : res.render('templates/home', {title: 'Mis Productos', subtitle: `Cantidad elegida: ${cantidad_productos}`, products: my_products.splice(0, cantidad_productos)})
     }
 
     console.log("Productos enviados!")

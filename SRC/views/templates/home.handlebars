@@ -3,9 +3,11 @@
     <h2>{{subtitle}}</h2>
 </div>
 
-{{#if activado}}
-    <p>Todo esto se ve porque entró al if</p>
+{{#each products}}
 
-{{else}}
-    <p>Caso contrario, se vería esto</p>
-{{/if}}
+<div>
+    <h2>PRODUCTO: {{this.title}}</h2>
+    <h2>PRECIO: {{this.price}}</h2>
+</div>
+
+{{/each}}

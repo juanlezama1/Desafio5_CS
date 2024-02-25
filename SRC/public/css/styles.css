@@ -16,7 +16,7 @@ body {
     text-align: center;
 }
 
-.card_container {
+.card_container, .error_section, .error_image {
     display: flex;
     justify-content: center;
 }
